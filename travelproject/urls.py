@@ -18,14 +18,14 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path, include
 
 from travelproject import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('travelapp.urls')),
-    path ('credentials/',include('credentials.urls'))
+    path('', include('travelapp.urls')),
+    path('credentials/', include('credentials.urls'))
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL,

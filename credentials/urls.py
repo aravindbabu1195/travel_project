@@ -1,7 +1,7 @@
 from django.urls import path
 
 from credentials import views
-
+app_name = 'cred'
 urlpatterns = [
 
     path('register',views.register,name='register'),

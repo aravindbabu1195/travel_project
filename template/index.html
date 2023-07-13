@@ -31,14 +31,14 @@
 							<div class="logo"><a href="index.html">Travello</a></div>
 							<nav class="main_nav">
 								<ul class="d-flex flex-row align-items-start justify-content-start">
-									<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About us</a></li>
+									<li><a href="{% url 'travel:demo' %}">Home</a></li>
+				<li><a href="{% url 'travel:about' %}">About us</a></li>
 				{% if user.is_authenticated %}
 				<li> Hello {{user.username}}</li>
-				<li><a href="credentials/logout">Logout</a></li>
+				<li><a href="{% url 'cred:logout' %}">Logout</a></li>
 				{% else %}
-				<li><a href="credentials/registraion">Registration</a></li>
-				<li><a href="credentials/login">Login</a></li>
+				<li><a href="{% url 'cred:register' %}">Registration</a></li>
+				<li><a href="{% url 'cred:login' %}">Login</a></li>
 				{% endif %}
 								</ul>
 							</nav>
